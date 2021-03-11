@@ -38,12 +38,12 @@ jobs:
         cd src
         python Propio.py
 
-    - uses: stefanzweifel/git-auto-commit-action@v4.1.1
+    - uses: stefanzweifel/git-auto-commit-action@v4
       with:
         commit_message: "Added data from distribucion DEIS to repo"
-
+        branch: src/holamundo.txt
         # Optional glob pattern of files which should be added to the commit
-        file_pattern: src
+        #file_pattern: /
 
         # Optional local file path to the repository
         repository: .
