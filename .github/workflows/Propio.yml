@@ -7,7 +7,7 @@ name: Actualiza_productos_de_UDD
 on:
     push:
         branches: master
-        paths: 'input/UDD/*.csv'
+        paths: '*'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,32 +36,4 @@ jobs:
     - name: generate products from UDD
       run: |
         cd src
-        python UDD.py &&\
-        python tweet.py ${{ secrets.TWITTER_API_KEY }} ${{ secrets.TWITTER_API_SECRET }}  \
-                          ${{ secrets.TWITTER_ACCESS_TOKEN }}  ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }} \
-                          "Actualicé los datos de movilidad en todo el territorio nacional que produce el Instituto de Data Science de @UDD_cl junto a @TelefonicaCL  😘💫. Mira específicamente qué actualicé en la imagen, y clónate el github https://github.com/MinCiencia/Datos-COVID19"
-
-
-    - uses: stefanzweifel/git-auto-commit-action@v4.1.1
-      with:
-        commit_message: "Added data from UDD to repo"
-
-        # Optional glob pattern of files which should be added to the commit
-        file_pattern: output/*/*.csv
-
-        # Optional local file path to the repository
-        repository: .
-
-        # Optional commit user and author settings
-        commit_user_name: MinCiencia GitHub Actions Bot
-        commit_user_email: actions@github.com
-        commit_author: minciencia github bot <actions@github.com>
-
-    - name: update_API
-      run: |
-        curl -u "${{ secrets.DO_INT_USER }}:${{ secrets.DO_INT_PASS }}" \
-        -H 'Accept: application/vnd.github.everest-preview+json'  "https://api.github.com/repos/Data-Observatory/covid19-API/dispatches" \
-        -d '{"event_type": "update_please_from_UDD"}'
-
-
-
+        python Propio.py
