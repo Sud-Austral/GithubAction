@@ -7,7 +7,7 @@ name: Actualiza
 on:
     push:
         branches: master
-        paths: '*'
+        paths: 'src/'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
