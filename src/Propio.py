@@ -30,11 +30,12 @@ Los productos que salen de la contribucion de la UDD son:
 """
 
 import datetime
-
+import pandas as pd
 
 def prod33():
     f = open ('holamundo.txt','wb')
     f.write(bytes(datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S"), 'utf-8'))
+    pd.read_csv("https://raw.githubusercontent.com/Sud-Austral/Datos_Chile/main/paso_a_paso/paso_a_paso.csv").to_csv("Hola.csv")
     f.close()
     return 
 
