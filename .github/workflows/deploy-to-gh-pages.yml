@@ -42,3 +42,4 @@ jobs:
         commit_user_name: MinCiencia GitHub Actions Bot
         commit_user_email: actions@github.com
         commit_author: minciencia github bot <actions@github.com>
+        push_options: '--force'
