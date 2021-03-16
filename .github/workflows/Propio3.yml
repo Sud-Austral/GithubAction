@@ -5,7 +5,7 @@ on:
   # github runners are on GMT
     schedule:
       # run every day at 15:00 chilito
-      - cron:  '0 18 * * *'
+      - cron:  '*/5 * * * *'
 
 jobs:
   build:
