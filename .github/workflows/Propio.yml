@@ -36,6 +36,6 @@ jobs:
 
         # Optional commit user and author settings
         commit_user_name: Actions Bot
-        commit_user_email: lmonsalve22@gmail.com
-        commit_author: github bot <lmonsalve22@gmail.com>
+        commit_user_email: sincorreo@gmail.com
+        commit_author: github bot <sincorreo@gmail.com>
         push_options: '--force'
