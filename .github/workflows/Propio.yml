@@ -21,8 +21,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Ejecutar Python Propio
+      env:
+          MY_VAR: ${{ secrets.TEST }}
+        
       run: |
-        echo ${{ secrets.TEST }}
+        echo $MY_VAR
         cd src
         python Propio.py
     - uses: stefanzweifel/git-auto-commit-action@v4
