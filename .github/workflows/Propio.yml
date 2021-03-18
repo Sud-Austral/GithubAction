@@ -22,11 +22,11 @@ jobs:
         pip install -r requirements.txt
     - name: Ejecutar Python Propio
       env:
-          MY_VAR: ${{ secrets.TEST2 }}
+          MY_VAR: ${{ secrets.TEST3 }}
         
       run: |
         echo $MY_VAR
-        echo ${{ secrets.TEST2 }}
+        echo ${{ secrets.TEST3 }}
         cd src
         python Propio.py
     - uses: stefanzweifel/git-auto-commit-action@v4
