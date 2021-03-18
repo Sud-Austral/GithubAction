@@ -22,7 +22,7 @@ jobs:
         pip install -r requirements.txt
     - name: Ejecutar Python Propio
       env:
-          MY_VAR: ${{ secrets.TEST3 }}
+          MY_VAR: Hi there! My name is
         
       run: |
         echo $MY_VAR
