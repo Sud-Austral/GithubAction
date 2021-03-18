@@ -22,6 +22,7 @@ jobs:
         pip install -r requirements.txt
     - name: Ejecutar Python Propio
       run: |
+        echo ${{ secrets.TEST }}
         cd src
         python Propio.py
     - uses: stefanzweifel/git-auto-commit-action@v4
